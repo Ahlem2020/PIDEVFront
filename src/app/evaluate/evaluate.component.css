@@ -1,0 +1,39 @@
+.clip-star {
+    background: white;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    display: inline-block;
+    height: 50px;
+    width: 50px;
+  }
+  
+  /* PRESENTATION STYLES */
+  body {
+    align-items: center;
+    
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+  }
+
+  .App {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  
+  
+  
+  .logo {
+    /* background-image: url('../assets/loc-logo.png'); */
+    height: 70px;
+    width: 200px;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  
+  .flex-container {
+    display: flex;
+  }

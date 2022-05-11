@@ -1,0 +1,123 @@
+<body>
+  <main class="main " id="top">
+    <br>
+    <section *ngIf="termine==false"  class="py-7" id="services" container-xl="container-xl">
+
+      <div class="container mt-5" style="  background-image: none;  background-color: #dad1d1; border-radius: 30px; background-color: hsla(60, 7%, 88%, 0.3);" >
+
+        <div  class="justify-content-center container mt-5" style="margin-top: 500px;">
+          <div class="col-md-1"></div>
+          <div class="col-md-12">
+            <div class="row mb-5 ">
+              <div class="col-md-6 mt-2">
+                <h1 class="justify-content-center" (mouseup)="mv()" (click)="cursor(quiz.questions.length)">
+                  {{quiz.title}}</h1>
+              </div>
+              <div class="col-md-4"></div>
+              <div class="col-md-2">
+                <h1 class="float-right">
+                  <countdown [config]="{leftTime: quiz.timing}" (event)="onTimerFinished()"></countdown>
+
+
+                </h1>
+              </div>
+            </div>
+
+            <div>
+              <div class="mb-5  ">
+                <div class="row ">
+                  <div class="col-md-8 ">
+                    <h4>Question {{i+1}} / {{quiz.questions.length}} :</h4>
+                  </div>
+                  <!-- <div class="col-md-4">
+            <h3 class="float-right"><countdown [config]="{leftTime: compt}"></countdown></h3>
+          </div> -->
+
+                </div>
+                <h3>{{quiz.questions[i].question}}</h3>
+              </div>
+              <div (click)="rep(quiz.questions[i].op1)" class="col-md-12 mb-5"><button
+                  class="btn btn-outline-danger w-100 h-100"><b>{{quiz.questions[i].op1}}</b></button></div>
+              <div (click)="rep(quiz.questions[i].op2)" class="col-md-12 mb-5"><button
+                  class="btn btn-outline-danger w-100 h-100"><b>{{quiz.questions[i].op2}}</b></button></div>
+              <div (click)="rep(quiz.questions[i].op3)" class="col-md-12 mb-5"><button
+                  class="btn btn-outline-danger w-100 h-100"><b>{{quiz.questions[i].op3}}</b></button></div>
+              <div (click)="rep(quiz.questions[i].op4)" class="col-md-12 mb-5"><button
+                  class="btn btn-outline-danger w-100 h-100"><b>{{quiz.questions[i].op4}}</b></button></div>
+
+            </div>
+            <!-- {{quiz.questions[i].question}} -->
+          </div>
+          <br>
+          <div *ngIf="i+1==nbrQ" (click)="valider()"><button class="btn btn-danger w-100 h-100  mb-3"> Validate</button>
+          </div>
+          <div class="row">
+            <div class="col-md-1">
+              <div *ngIf="i+1<nbrQ && i+1>1" (click)="prev()"><button class="btn btn-outline-danger w-100 h-100 flaot-left">
+                  Prev</button></div>
+
+            </div>
+            <div class="col-md-10"></div>
+            <div class="col-md-1 mb-3">
+              <div *ngIf="i+1<nbrQ" (click)="next()"><button class="btn btn-outline-danger w-100 h-100 flaot-right">
+                  Next</button></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section *ngIf="termine" class="py-7" id="contentToConvert" container-xl="container-xl">
+      <div id="qz" class="container mt-5" style="  background-image: none; background-color: #f0ece9; border-radius: 30px; background-color: hsla(60, 7%, 88%, 0.3);">
+        <div class="row ">
+          <div class="col-md-8 mt-3">
+            <h1>{{quiz.title}}</h1>
+          </div>
+          <div class="col-md-4 float right mt-3">
+            <b style="font-size: 30px">Result : {{note}} / {{quiz.note}}</b>
+          </div>
+        </div>
+
+        <div *ngFor="let q of quiz.questions">
+          <h3>{{q.question}}</h3>
+          <div *ngIf="q.reponse==q.writedResponse && q.op1==q.reponse" style="color: green"><b>{{q.op1}}</b></div>
+          <div *ngIf="q.op1==q.writedResponse && q.op1!=q.reponse" style="color: red"><b>{{q.op1}}</b></div>
+          <div *ngIf="q.op1!=q.writedResponse && q.op1!=q.reponse" style="color: black">{{q.op1}}</div>
+          <div *ngIf="q.op1!=q.writedResponse && q.op1==q.reponse" style="color: black">{{q.op1}}</div>
+
+          <div *ngIf="q.reponse==q.writedResponse && q.op2==q.reponse" style="color: green"><b>{{q.op2}}</b></div>
+          <div *ngIf="q.op2==q.writedResponse && q.op2!=q.reponse" style="color: red"><b>{{q.op2}}</b></div>
+          <div *ngIf="q.op2!=q.writedResponse && q.op2!=q.reponse" style="color: black">{{q.op2}}</div>
+          <div *ngIf="q.op2!=q.writedResponse && q.op2==q.reponse" style="color: black">{{q.op2}}</div>
+
+          <div *ngIf="q.reponse==q.writedResponse && q.op3==q.reponse" style="color: green"><b>{{q.op3}}</b></div>
+          <div *ngIf="q.op3==q.writedResponse && q.op3!=q.reponse" style="color: red"><b>{{q.op3}}</b></div>
+          <div *ngIf="q.op3!=q.writedResponse && q.op3!=q.reponse" style="color: black">{{q.op3}}</div>
+          <div *ngIf="q.op3!=q.writedResponse && q.op3==q.reponse" style="color: black">{{q.op3}}</div>
+
+          <div *ngIf="q.reponse==q.writedResponse && q.op4==q.reponse" style="color: green"><b>{{q.op4}}</b></div>
+          <div *ngIf="q.op4==q.writedResponse && q.op4!=q.reponse" style="color: red"><b>{{q.op4}}</b></div>
+          <div *ngIf="q.op4!=q.writedResponse && q.op4!=q.reponse" style="color: black">{{q.op4}}</div>
+          <div *ngIf="q.op4!=q.writedResponse && q.op4==q.reponse" style="color: black">{{q.op4}}</div>
+
+          <div *ngIf="q.writedResponse==null " style="color: green">Correct response : {{q.reponse}}</div>
+          <div *ngIf="q.op1==q.writedResponse && q.op1!=q.reponse" style="color: green">Correct response : <b>{{q.reponse}}</b>
+          </div>
+          <div *ngIf="q.op2==q.writedResponse && q.op2!=q.reponse" style="color: green">Correct response : <b>{{q.reponse}}</b>
+          </div>
+          <div *ngIf="q.op3==q.writedResponse && q.op3!=q.reponse" style="color: green">Correct response : <b>{{q.reponse}}</b>
+          </div>
+          <div *ngIf="q.op4==q.writedResponse && q.op4!=q.reponse" style="color: green">Correct response : <b>{{q.reponse}}</b>
+          </div>
+          <br>
+
+        </div>
+        <div (click)="generatePDF()"><button class="btn btn-danger w-100 h-100  mb-3"> Download result</button>
+        </div>
+       
+      </div>
+    </section>
+  </main>
+</body>
+
+

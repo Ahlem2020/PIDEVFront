@@ -1,0 +1,136 @@
+<body>
+  <main class="main" id="top">
+   
+    <section class="py-xxl-10 pb-0" id="home">
+      <div class="bg-holder bg-size" style="background-image:url(assets/img/gallery/hero-header-bg.png);background-position:top center;background-size:cover;">
+      
+      </div>
+  <div class="">
+
+
+    <div class="container "  >
+      <div class="row" >
+
+      </div>
+    
+      <!-- <div class="row mt-2">
+
+
+        <div class="col-lg-3 col-md-3 mb-3 card-3" *ngFor="let t of listTrainings" style=" border-radius: 20px 20px 20px 20px;  background-color: #F3E5DA;">
+          <div class="card">
+            <div class=" bg-image hover-overlay ripple ripple-surface ripple-surface-light" 
+              data-mdb-ripple-color="light">
+              <img src="{{'./assets/images/training/'+t.image}}" class="img-fluid" style="height: 400px; width:398px ; border-radius: 0px 0px 30px;">
+              <a href="#!">
+                <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+              </a>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">{{t.domain}}</h5>
+              <h5 class="card-title">{{t.subject}}</h5>
+              <p class="card-text">
+                <b>Duration :</b>{{t.duration}} days <br>
+                <b>Level :</b>{{t.level}}<br>
+                <b>Animated by :</b>{{t.trainerName}}<br>
+              </p>
+              <a (click)="showDetails(t.id)" class="btn btn-outline-danger">Show more</a>
+            </div>
+          </div>
+        </div>
+
+         End-Trainings list -->
+
+
+      </div> 
+
+      <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="./assets/images/training/t3.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="./assets/images/training/t2.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="./assets/images/training/t4.jpg" class="d-block w-100" alt="...">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+         
+        </button>
+      </div>
+
+      <section class="food_section layout_padding">
+
+        
+        <div class="container">
+          <div class="heading_container heading_center" style="text-align: center">
+            <h2>
+              Our Trainings
+            </h2>
+          </div>
+    
+          <ul class="filters_menu border-radius-20">
+            <li data-filter="*"(click)="filter('All')"><b>All</b></li>
+            <li  data-filter="Informatique" (click)="filter('Informatique')">Informatique</li>
+            <li  data-filter=".Sante" (click)="filter('Sante')">Santé</li>
+            <li data-filter="" (click)="filter('Entreprenariat')">Entreprenariat</li>
+            <li data-filter="" (click)="filter('Cuisine')">Cuisine</li>
+            <li data-filter="" (click)="filter('Coiffure')">Coiffure</li>
+            <li data-filter="" (click)="filter('Couture')">Couture</li>
+            <li data-filter="" (click)="filter('Marketing')">Marketing</li>
+            <li data-filter="" (click)="filter('Communication')">Communication</li>
+        
+            <form class="form-inline my-2 my-md-0 float-right" style="width:max-content">
+              <input class="form-control float-right"  name="search_Text" class="form-control" [(ngModel)]="search_Text" type="text" (ngModelChange)="search()" placeholder="Search" aria-label="Search" style="width:max-content;">
+            </form>
+          </ul>
+    
+          <div class="filters-content">
+            <div class="row grid mb-2" style="position: relative; height: 932px;">
+              <div class="col-lg-3 col-md-3 mb-3 card-3 mb-5 all {{t.domain}}" *ngFor="let t of listTrainings" style=" border-radius: 20px 20px 20px 20px; ">
+                <div class="card" style="background-color: hsla(60, 33%, 99%, 0.3);">
+                  <div class=" bg-image hover-overlay ripple ripple-surface ripple-surface-light" 
+                    data-mdb-ripple-color="light">
+                    <img src="{{'./assets/images/training/'+t.image}}" class="img-fluid" style="height: 400px; width:398px ; ">
+                    <a href="#!">
+                      <div class="mask" ></div>
+                    </a>
+                  </div>
+                  <div class="card-body">
+                    <b>Domain :</b>{{t.domain}}<br>
+                    <b>Subject :</b>{{t.subject}}
+                    <p class="card-text">
+                      <b>Duration :</b>{{t.duration}} days <br>
+                      <b>Level :</b>{{t.level}}<br>
+                      <b>Animated by :</b>{{t.trainerName}}<br>
+                    </p>
+                    <div class="row">
+                      <div class="col-md-6">
+                        <a (click)="showDetails(t.id)" class="btn btn-outline-danger">Show more</a>
+                      </div>
+                      <div class="col-md-6" style="text-align: right">
+                        {{t.price}} TND
+                      </div>
+                    </div>
+                   
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+        
+        </div>
+      </section>
+      
+    
+  </div>
+</section>
+</main>
+</body>

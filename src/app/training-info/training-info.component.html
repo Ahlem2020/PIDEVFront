@@ -1,0 +1,258 @@
+<!-- <body>
+  <main class="main container" id="top">
+    <section class="py-7" id="services" container-xl="container-xl">
+
+      <div class="row mt-5 mb-5 ml-5 mr-5 ">
+
+        <div class="col-md-4 mt-5 ">
+          <div class=" justify-content-center " data-aos="fade-up" data-aos-delay="200">
+            <img src="{{'./assets/images/training/'+training.image}}" alt=" Training Image" class="img-fluid border-2 w-100"
+              style="width: 400px; height: 400px; border-radius: 5%;">
+          </div>
+        </div>
+        <div class="col-md-8 mt-5">
+          <div class="row">
+            <div class="col-md-10"></div>
+            <div class="col-md-2">
+              <b *ngIf="participated==false" (click)="participate()" class="bnt btn-outline-primary"
+                style="text-align: right">Participate</b>
+              <b *ngIf="participated" (click)="departicipate()" class="bnt btn-outline-primary"
+                style="text-align: right">participated</b>
+            </div>
+
+          </div>
+
+
+          <h1 class=" mb-2 ">{{training.subject}}</h1>
+
+          <b>Description :</b>
+          <p>{{training.description}}</p>
+          <div>
+            <b>Trainer : </b> {{training.trainerName}}
+          </div>
+          <div>
+            <b>{{training.startDate}}</b> -- <b>{{training.endDate}}</b>
+          </div>
+
+          <div>
+            <b>Price : <ng-container *ngIf="training.price == 0; then thenTemplate; else elseTemplate"></ng-container>
+              <ng-template #thenTemplate>
+                Free
+              </ng-template>
+              <ng-template #elseTemplate>
+                {{training.price}}
+              </ng-template>
+            </b>
+          </div>
+
+          <div class="row">
+            <div class="col-md-10">
+             
+              <div data-wow-delay="0.3s" class="mt-5
+              ">
+                <div class="d-flex align-items-center">
+                  <rating style="color: #f5b84f;font-size: 40px;" [(ngModel)]="training.note" [max]="max"
+                    [readonly]="isReadonly" (ngModelChange)="evaluate(training.note)">
+                  </rating>
+                </div>
+              </div>
+
+            </div>
+            <div class="float-right col-md-2" style="text-align: right;
+        display: table-cell;
+        vertical-align: middle;">
+              <div class=" justify-content-center align-items-center mt-4" data-aos="fade-up" data-aos-delay="200"
+                style="width: 100px;">
+                <img src="./assets/images/training/q.png" alt=" Training Image" class="img-fluid"
+                  (click)="checkQuiz(training.quiz.id)">
+              </div>
+            </div>
+        
+          </div>
+        </div>
+
+
+
+
+      </div>
+    </section>
+  </main>
+</body> -->
+<body>
+<main class="main" id="top">
+   
+  <section class="py-xxl-10 pb-0" id="home">
+    <div class="bg-holder bg-size" style="background-image:url(assets/img/gallery/hero-header-bg.png);background-position:top center;background-size:cover;">
+    
+    </div>
+ 
+  </section>
+  <section class="section blog-wrap bg-gray">
+    <div class="container ">
+      <div class="row">
+        <div class="col-lg-8">
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="single-blog-item">
+                
+                <div class="mb-3 "><h1>{{training.subject}}</h1></div>
+                <div class="blog-item-meta bg-gray py-1 px-2">
+                  <span class="text-muted text-capitalize mr-3 float-right mb-2"><b>Domain : {{training.domain}}</b></span> 
+            
+                </div>
+                <img src="{{'./assets/images/training/'+training.image}}" alt="" class="img-fluid rounded w-100">
+  
+                <div class="blog-item-content bg-white p-5">
+                  <div class="blog-item-meta bg-gray py-1 px-2">
+                    <span class="text-muted text-capitalize mr-3">Domain : {{training.domain}}</span> 
+              
+                  </div>
+  
+  
+                
+  
+                  <h3 class="quote">{{training.description}}</h3>
+  
+  
+                  <div class="tag-option mt-5 clearfix">
+                   
+                    <div class="blog-item-meta bg-gray py-1 px-2"> 
+                      <span class="text-muted text-capitalize mr-3">Animated by : {{training.trainerName}}</span>
+                    </div>
+                    <div class="blog-item-meta bg-gray py-1 px-2"> 
+                      <span class="text-muted text-capitalize mr-3">Started At : {{training.startDate}}</span>
+                    </div>
+                    <div class="blog-item-meta bg-gray py-1 px-2"> 
+                      <span class="text-muted text-capitalize mr-3">Duration : {{training.duration}} days</span>
+                    </div>
+                    <div class="blog-item-meta bg-gray py-1 px-2"> 
+                      <span class="text-muted text-capitalize mr-3">Price  : {{training.price }}.000 TND</span>
+                    </div>
+  
+                    <!-- <ul class="float-right list-inline">
+                      <li class="list-inline-item"> Share: </li>
+                      <li class="list-inline-item"><a href="#" target="_blank"><i class="fab fa-facebook-f"
+                            aria-hidden="true"></i></a></li>
+                      <li class="list-inline-item"><a href="#" target="_blank"><i class="fab fa-twitter"
+                            aria-hidden="true"></i></a></li>
+                      <li class="list-inline-item"><a href="#" target="_blank"><i class="fab fa-pinterest-p"
+                            aria-hidden="true"></i></a></li>
+                      <li class="list-inline-item"><a href="#" target="_blank"><i class="fab fa-google-plus"
+                            aria-hidden="true"></i></a></li>
+                    </ul> -->
+                  </div>
+                </div>
+              </div>
+            </div>
+  
+  
+         
+            <div class="col-lg-12 mb-5" >
+              <div class="comment-area card border-0 p-5">
+                <!-- <h4 class="mb-4">  {{Comment.length}} Comments</h4> -->
+                <!-- <ul class="comment-tree list-unstyled" *ngFor="let c of Comment "> -->
+          <!-- <li>
+            <div class="comment-area-box">
+              <img alt="" src="images/blog/test2.jpg" class="mt-2 img-fluid float-left mr-3">
+    
+              <h5 class="mb-1">UserName</h5>
+    
+              <div class="comment-meta mt-4 mt-lg-0 mt-md-0 float-lg-right float-md-right">
+              <a href="#"><i class="icofont-reply mr-2 text-muted"></i>Reply |</a>
+              <span class="date-comm">Posted {{training.startDate}}</span>
+              </div>
+    
+              <div class="comment-content mt-3">
+              <p>{{training.description}} </p>
+              </div>
+            </div>
+            </li>
+  
+        
+                </ul> -->
+              </div>
+            </div>
+  
+            <!-- <div class="col-lg-12">
+              <form class="contact-form bg-white rounded p-5" id="comment-form">
+                <h4 class="mb-4">Write a comment</h4>
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <input class="form-control" type="text" name="name" id="name" placeholder="Name:">
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <input class="form-control" type="text" name="mail" id="mail" placeholder="Email:">
+                    </div>
+                  </div>
+                </div>
+  
+  
+                <textarea class="form-control mb-3" name="comment" id="comment" cols="30" rows="5"
+                  placeholder="Comment"></textarea>
+  
+                <input class="btn btn-main btn-round-full" type="submit" name="submit-contact" id="submit_contact"
+                  value="Submit Message">
+              </form>
+            </div> -->
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="sidebar-wrap">
+          
+  
+            <div class="sidebar-widget card border-0 mb-3">
+              <img src="images/blog/blog-author.jpg" alt="" class="img-fluid">
+              <div class="card-body p-4 text-center">
+                <!-- <h5 class="mb-0 mt-4">{{user.name}}</h5> -->
+                <div class="d-flex align-items-center">
+                  <b>Rate this course :</b>
+                  <rating style="color: #f5b84f;font-size: 40px;" [(ngModel)]="training.note" [max]="max"
+                    [readonly]="isReadonly" (ngModelChange)="evaluate(training.note)">
+                  </rating>
+                </div>
+  
+                <!-- <ul class="list-inline author-socials">
+                  <li class="list-inline-item mr-3">
+                    <a href="#"><i class="fab fa-facebook-f text-muted"></i></a>
+                  </li>
+                  <li class="list-inline-item mr-3">
+                    <a href="#"><i class="fab fa-twitter text-muted"></i></a>
+                  </li>
+                  <li class="list-inline-item mr-3">
+                    <a href="#"><i class="fab fa-linkedin-in text-muted"></i></a>
+                  </li>
+                  <li class="list-inline-item mr-3">
+                    <a href="#"><i class="fab fa-pinterest text-muted"></i></a>
+                  </li>
+                  <li class="list-inline-item mr-3">
+                    <a href="#"><i class="fab fa-behance text-muted"></i></a>
+                  </li>
+                </ul> -->
+              </div>
+            </div>
+  
+            <div class="sidebar-widget latest-post card border-0 p-4 mb-3">
+              <h5>For you</h5>
+  
+              <div class="media border-bottom py-3" *ngFor="let t of listTrainings">
+                <a href="#"><img class="mr-4" src="{{'./assets/images/training/'+t.image}}" alt="   Image   " style="width: 100px"></a>
+                <div class="media-body">
+                  <h6 class="my-2"><a href="#">{{t.subject}}</a></h6>
+                  <span class="text-sm text-muted">Started at {{t.startDate}}</span>
+                </div>
+              </div>
+  
+            </div>
+  
+     
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+</body>

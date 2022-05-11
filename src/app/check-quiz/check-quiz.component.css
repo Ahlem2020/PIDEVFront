@@ -1,0 +1,11 @@
+/* body{
+    background-image:none !important;
+    background-color: white !important;
+} */
+
+body {
+    margin-left: 0;
+    margin-right: 0;
+    background-image:none !important;
+    background-color: white !important;
+}

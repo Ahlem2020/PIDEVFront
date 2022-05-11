@@ -1,0 +1,36 @@
+<section class="hero " style="background-color: #F3E5DA">
+    <div class=" container mt-5">
+  <div class="row">
+      <!-- <div class="col-md-2">
+hfjhrgg <br>
+efhjefjrn
+      </div> -->
+      <div class="col-md-10">
+        <div class="card mb-3" *ngFor="let t of listTrainings">
+            <div class="card-header">
+              <b>{{t.subject}}</b>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-1">
+                        <img src="{{'./assets/images/training/'+t.image}}" alt=" Training Image" class=" mt-2 mb-2 align-middle"
+                        style=" vertical-align: middle; text-align: center; width: 80px;">
+                    </div>
+                    <div class="col-md-11 middle mt-2" >
+                        <div class="">{{t.description}}</div>
+                        <div class=""><b>Started on : </b>{{t.startDate}} <b>to </b>{{t.endDate}}</div>
+                    </div>
+                </div>
+                
+              
+              
+              <a href="#" class="btn btn-primary float-right" style="text-align: right">Go somewhere</a>
+            </div>
+          </div>
+    
+      </div>
+  </div>
+
+  
+</div>
+</section>

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Partner } from '../module/Parter';
+import { UniversityService } from '../services/university.service';
 
 @Component({
   selector: 'app-home',
@@ -6,10 +8,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-
-  constructor() { }
+  
+  constructor(private condidacyService:UniversityService) { 
+    
+  }
+  listOfPartner:Partner[];
 
   ngOnInit(): void {
+
+    this.condidacyService.suggestion(1).subscribe(Partner=>this.listOfPartner=Partner);
   }
 
 }

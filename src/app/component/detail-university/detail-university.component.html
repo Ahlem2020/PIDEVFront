@@ -1,0 +1,195 @@
+
+<body>
+  <!--/main-->
+   <main class="main" id="top">
+ 
+     <section class="py-xxl-10 pb-0" id="home">
+       <div class="bg-holder bg-size" style="background-image:url(assets/img/gallery/hero-header-bg.png);background-position:top center;background-size:cover;">
+       
+       </div>
+      
+     </section>
+  
+ 
+ 
+ <!--/carousel-->
+ 
+ <div class="col-mg-3 mb-5" style="height: 20%;">
+ 
+ <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+     
+   
+ 
+     <ol class="carousel-indicators">
+       <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+       <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+       <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+     </ol>
+     <div class="carousel-inner " >
+       
+       
+       <div class="carousel-item active" >
+         <img class="d-block w-100" src="assets/img/4.jpg" alt="first slide">
+       </div>
+    </div>
+    
+ 
+ </div>
+ </div>
+ 
+ 
+ <!--/title-->
+ 
+ 
+ <div>
+   <h1 style="text-align: center;">{{partner.name}}</h1>
+ </div>
+ 
+ 
+ <!--/detail université-->
+ 
+ <div class="row">
+    
+  <!-- About Start -->
+  <div class="container-fluid overflow-hidden my-3 px-lg-0">
+     <div class="container about px-lg-0" style="background-color:#ffffffaf;">
+         <div class="row g-0 mx-lg-0">
+             <div class="col-lg-6 ps-lg-0" style="min-height: 400px;" style="background-color:#ffffffaf;">
+                 <div class="position-relative h-100">
+                     <img class="position-absolute img-fluid w-60 h-40" src="{{'./assets/img/Universite/'+partner.id+'/'+partner.logo}}" style="object-fit: cover;" alt="">
+                 </div>
+             </div>
+             <div class="col-lg-6 about-text py-5 wow fadeIn" data-wow-delay="0.5s">
+                
+                 <div class="p-lg-5 pe-lg-0">
+                     <div class="section-title text-start" >
+                         <h1 class="display-5 mb-4">About Us</h1>
+                     </div>
+                     <p class="mb-4 pb-2">{{partner.description}}</p>
+                     <div class="row g-4 mb-4 pb-2">
+                         <div class="col-sm-6 wow fadeIn" data-wow-delay="0.1s">
+                             <div class="d-flex align-items-center">
+                                 <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-white" style="width: 60px; height: 60px;">
+                                     <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+                                         <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
+                                       </svg>
+                                 </div>
+                                 <div class="ms-3">
+                                     <h2 class="text-primary mb-1" data-toggle="counter-up">{{partner.address}}</h2>
+                                     <p class="fw-medium mb-0">Address</p>
+                                 </div>
+                             </div>
+                         </div>
+                         <div class="col-sm-6 wow fadeIn" data-wow-delay="0.3s">
+                             <div class="d-flex align-items-center">
+                                 <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-white" style="width: 60px; height: 60px;">
+                                     Note
+                                 </div>
+                                 <rating  style="color: #edc234;font-size: 30px;" [(ngModel)]="partner.note" [max]="max" [readonly]="isReadonly" (ngModelChange)="note(partner.note)">
+                                </rating>
+                             </div>
+                         </div>
+ 
+                         
+ 
+ 
+                     </div>
+                     <div class="d-grid" (click)="addC()">
+                       <button class="btn btn-primary" type="submit">Add Condidacy<i class="fas fa-paper-plane ms-2"></i></button>
+                     </div>
+                     
+                 </div>
+             </div>
+         </div>
+     </div>
+ 
+ <!-- About End -->
+ 
+ </div>
+ 
+ 
+ </div>
+ 
+ 
+ 
+ 
+ 
+ <!--/suggestion-->
+ 
+   <section class="food_section layout_padding" style="margin-bottom:2%;">
+     
+     <div class="container" style="margin-left: 10%;">
+         <h1 class="sahar center"> For you </h1> <br>
+        
+          
+         <div class="row">
+         
+           <div class="col-md-20 ml-5">
+   
+             <div class="cent ml-5">
+               <div class="filters-content">
+                 <div class="row grid" >
+                   
+                   <div class="col" style="width: 27rem;" *ngFor="let t of listOfPartner | slice:0:3">
+                     <div class="box">
+                       <div>
+                         <div class="img-box">
+                           <img src="{{'./assets/img/Universite/'+t.id+'/'+t.logo}}" alt="">
+                         </div>
+                         <div class="detail-box">
+                           <h5>
+                            {{t.name}}
+                           </h5>
+                           <p>
+                             Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit, magnam voluptatem repellendus sed eaque
+                           </p>
+                           <div class="options">
+                             <h6>
+                               {{t.address}}
+                             </h6>
+                             
+                               <div class="d-grid" (click)="detailUniversity()">
+                                 <button class="btn btn-primary" type="submit">More</button>
+                               </div>
+                             
+                           </div>
+                         </div>
+                       </div>
+                     </div>
+                   </div>
+                  
+                 </div>
+               </div>
+             </div>
+   
+           </div>
+   
+         </div>
+     
+     
+   
+   
+   
+   
+   
+   
+    
+   </div>
+   </section>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  </main>
+ 
+ </body>
+ 
+ 
+ 
+ 
+ 
+ 
+ 

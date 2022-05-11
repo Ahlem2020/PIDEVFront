@@ -1,0 +1,30 @@
+
+
+.bn{
+    margin: 10px;
+    font-size: 30px;
+    margin : 13px;
+    width: 200px;
+    height: 50px;
+
+
+}
+
+button span{
+    font-size: 18px;
+
+}
+
+
+.bt{
+
+    background-color: #E4B299!important;
+}
+
+
+body {
+    margin-left: 0;
+    margin-right: 0;
+    background-image:none !important;
+    background-color: white !important;
+}

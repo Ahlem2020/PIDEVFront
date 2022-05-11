@@ -1,0 +1,9 @@
+.nav-link:hover, .nav-link:focus {
+   
+    color: #E4B299!important;
+  }
+.btn-primary {
+    color: #FFFEFE;
+    background-color: #EF8D91;
+    border-color: #EF8D91;
+  }

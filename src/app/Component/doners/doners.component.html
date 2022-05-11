@@ -1,0 +1,38 @@
+<main style="
+background-color: white !important;">
+    <section>
+        <div class="section_title text-center mb-55">
+            <h3 class="titlep"><span>Our top 3  Volunteers</span></h3>
+        </div>
+        
+        
+        <div>
+          <div class="container" style="padding-top: 70px; padding-top: 70px;
+          padding-left: 200px;     height: 1000px;">
+            <div class="row">
+              <div class="col-8 col-sm-9 col-md-4 col-lg-4" *ngFor="let doners of listofdons">
+                <div class="our-team" style="height: 363px;     width: 260px;
+                 ">
+                  <div class="picture">
+                    <img class="img-fluid" src="{{'assets/img/'+doners.photos}}">
+                  </div>
+                  <div class="team-content">
+                    <h3 class="name" style="font-family: fantasy;">{{doners.firstName}}{{doners.lastName}}</h3>
+                    <h4 class="title">{{doners.civilState}}</h4>
+                  </div>
+                  <ul class="social">
+                    <li style="font-family: serif;"> {{doners.email}}</li>
+
+                  </ul>
+                </div>
+              </div>
+                  
+              </div>
+            </div>
+          </div>
+        
+    
+          </section>
+          <!-- <section> close ============================-->
+          <!-- ============================================-->
+</main>

@@ -1,0 +1,116 @@
+<main style="
+background-color: white !important;">
+<div class="sidenav"> 
+  
+  <form>
+
+    <a class="search" style="padding-top:100px;">Search by designation : </a>
+    
+   <input type="text" class="form-control" id="rec" (keyup)="loadeven($event)"
+           style="width: 174px">
+         </form>
+</div>
+
+  
+  
+    <section>
+      <div style="padding-left: 400px;height: 365px;width: 1246px;"><img src="assets/img/donation-b.jpg"></div>
+      <div class="row justify-content-center" style="padding-left:50px!important; padding-top:100px;">
+        <div class="col-md-8 col-lg-5 text-center mb-3">
+            <h5 class="text-danger" style="font-size: 33px;">Donation Space</h5>
+            <h2>Our jackpots</h2>
+        </div>
+        <br>
+        <br>
+    </div>
+        <div class="row mb-5" style="padding-top: 250px;" style="padding-left: 278px!important;">
+            <div   class="cardee" *ngFor="let jackpot of listofjackpots" >
+                <div *ngIf="jackpot.event == null">
+                    <div class="card" style="max-height: 450px!important; height: 400px!important;;">
+                      <div class="topc">
+                        <img class="card-img" src="../assets/img/jack.jpg" alt="Card image cap"> {{jackpot.amount}} TND </div>
+                        <p>
+                        <div class="cardm">
+                           
+                          <div class="progress" style="margin-left: -6px; margin-right:6px;font-size: 10px;"> 
+                            <div class="progress-bar" role="progressbar" aria-valuenow="25"
+                            aria-valuemin="0" aria-valuemax="20"  [ngStyle]="{'width': jackpot.amount*100/jackpot.amountgoal  + '%'}">
+                            <div>
+                             {{
+                              (jackpot.amount*100/jackpot.amountgoal) | number : '1.0-0'
+                             }} %
+                            </div>
+                            </div>
+                          </div>
+                        <div>
+                        <span style="padding-left:209px;">{{jackpot.amountgoal}} TND
+                        </span>
+                      </div>
+                    </div>
+                        
+                         <div class="card-body">
+                        <h5 class="card-title"style="margin-left: -46px;font-family: initial;font-size: 23px;color: black;" >{{jackpot.goal}}</h5>
+                        <p class="card-text" style="font-family: system-ui; margin-left: -45px;
+                      ">
+                            {{jackpot.designation}}
+                        </p>
+                       
+                        <div class="row">
+                            <div class="Donate"><button style=" bottom:0!important;  margin-bottom: 10px!important;   position: absolute;color: #faa5a9;;border-color: #d5cfd7;background-color: #fff6f1;" type="button" (click)="donate(jackpot.id)" class="btn rounded-pill btn-outline-success" >Make
+                                    Donation</button></div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+            
+        </div>   
+        
+    
+      </div>
+     
+   
+    
+    </section>
+    <div style="margin-top: -180px;">
+   <app-doners></app-doners>
+  </div>
+    <section id="findUs">
+
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-md-8 col-lg-5 mb-6 text-center">
+              <h5 class="text-danger">FIND US</h5>
+              <h2>Access us easily</h2>
+            </div>
+            <div class="col-12">
+              <div class="card card-span rounded-2 mb-3">
+                <div class="row">
+                  <div class="col-md-6 col-lg-7 d-flex"><img class="w-100 fit-cover rounded-md-start rounded-top rounded-md-top-0" src="assets/img/gallery/map.svg" alt="map" /></div>
+                  <div class="col-md-6 col-lg-5 d-flex flex-center">
+                    <div class="card-body">
+                      <h5>Contact with us</h5>
+                      <p class="text-700 my-4"> <i class="fas fa-map-marker-alt text-warning me-3"></i><span>2277 Lorem Ave, San Diego, CA 22553</span></p>
+                      <p><i class="fas fa-phone-alt text-warning me-3"></i><span class="text-700">Monday - Friday: 10 am - 10pm<br/><span class="ps-4">Sunday: 11 am - 9pm  </span></span></p>
+                      <p><i class="fas fa-envelope text-warning me-3"> </i><a class="text-700" href="mailto:vctung@outlook.com"> info@quriarbox.com</a></p>
+                      <ul class="list-unstyled list-inline mt-5">
+                        <li class="list-inline-item"><a class="text-decoration-none" href="#!"><i class="fab fa-facebook-square fs-2"></i></a></li>
+                        <li class="list-inline-item"><a class="text-decoration-none" href="#!"><i class="fab fa-instagram-square fs-2"></i></a></li>
+                        <li class="list-inline-item"><a class="text-decoration-none" href="#!"><i class="fab fa-twitter-square fs-2"></i></a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="text-center">
+                <button class="btn btn-primary px-5" type="submit"><i class="fas fa-phone-alt me-2"></i><a class="text-light" href="tel:123-456789">Call us to delivery 123-456789</a></button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- end of .container-->
+
+      </section>
+</main>

@@ -1,0 +1,82 @@
+
+<main style="background-color: white !important;">
+    <section>
+
+        <script src="https://checkout.stripe.com/checkout.js"></script>
+        <!--   <form>
+        <input type="text" placeholder="Credit Card #" name="cardNumber">
+        <input type="text" placeholder="Expiration Month" name="expMonth">
+        <input type="text" placeholder="Expiration Year" name="expYear">
+        <input type="text" placeholder="CVC" name="cvc">
+        <button (click)="chargeCreditCard()">Submit</button>
+      </form>
+    -->
+<form>
+        <div class="container bg-light d-md-flex align-items-center"  style="    margin-top: 171px;">
+            <div class="card box1 shadow-sm p-md-5 p-md-5 p-4">
+                <div class="donationa" style="color: white;">Donation amount</div>
+               <div class="donation"> <input type="text" required name="amount" class="form-control kh" ></div> 
+            </div>
+            <div class="card box2 shadow-sm">
+                <div class="d-flex align-items-center justify-content-between p-md-5 p-4"> <span
+                        class="h5 fw-bold m-0">Payment methods</span>
+                    <div class="btn btn-primary bar"><span class="fas fa-bars"></span></div>
+                </div>
+                <ul class="nav nav-tabs mb-3 px-md-4 px-2">
+                    <li class="nav-item"> <a class="nav-link px-2 active" aria-current="page" href="#">Credit Card</a>
+                    </li>
+                    
+                </ul>
+                <div class="px-md-5 px-4 mb-4 d-flex align-items-center">
+                    <div class="icons">
+                        <img src="https://img.icons8.com/color/48/000000/visa.png"/>
+                        <img src="https://img.icons8.com/color/48/000000/mastercard-logo.png"/>
+                        <img src="https://img.icons8.com/color/48/000000/maestro.png"/>
+                    </div>
+                    
+                </div>
+               
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="d-flex flex-column px-md-5 px-4 mb-4"> <span>Credit Card</span>
+                                <div class="inputWithIcon"> <input  name="cardNumber" style="border-radius: 90px;" class="form-control" type="text"
+                                        placeholder="4523 3652 3256 3252"> <span class=""> <img
+                                            src="https://www.freepnglogos.com/uploads/mastercard-png/mastercard-logo-logok-15.png"
+                                            alt=""></span> </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="d-flex flex-column ps-md-5 px-md-0 px-4 mb-4"> <span>Expiration month<span
+                                        class="ps-1"></span></span>
+                                <div class="inputWithIcon"> <input type="text" class="form-control" placeholder="Expiration Month" name="expMonth">  <span
+                                        class="fas fa-calendar-alt"></span> </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="d-flex flex-column pe-md-5 px-md-0 px-4 mb-4"> <span>expiration year</span>
+                                <div class="inputWithIcon"> <input type="text" style="border-radius: 90px;" class="form-control"  placeholder="Expiration Year" name="expYear">
+                                    <span class="fas fa-lock"></span> </div>
+                            </div>
+                        </div>
+                        <div class="col-10" style="    margin-left: 47px;">
+                            <div class="d-flex flex-column pe-md-5 px-md-0 px-4 mb-4"> <span>ccv</span>
+                                <div class="inputWithIcon"> <input type="password" style="border-radius: 90px;" class="form-control" name="cvc" value="123">
+                                    <span class="fas fa-lock"></span> </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="d-flex flex-column px-md-5 px-4 mb-4"> <span>Name</span>
+                                <div class="inputWithIcon"> <input style="border-radius: 90px;" class="form-control text-uppercase" type="text"
+                                      placeholder="khaled etc"> <span class="far fa-user"></span> </div>
+                            </div>
+                        </div>
+                        <div class="col-12 px-md-5 px-4 mt-3">
+                            <button (click)="chargeCreditCard()" class="btn btn-primary w-100">Pay</button>
+                        </div>
+                    </div>
+                
+            </div>
+        </div>
+    </form>
+    </section>
+</main>

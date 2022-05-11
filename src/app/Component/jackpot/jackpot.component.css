@@ -1,0 +1,71 @@
+.cardm{
+    
+    margin-left: 12px;
+    color: #222222;
+    font-weight: 600;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 12px;
+}
+.card-body{
+    margin-left: 42px;
+    max-height: 220px;
+}
+.topc{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 24px;;
+}
+.cadreh
+{
+    padding-left: 200px !important;
+    position: fixed;
+}
+.card{
+    max-height: 300;
+    background-color: blanchedalmond;
+    
+    
+}
+.sidenav a {
+    padding: 8px 6px 16px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #818181;
+    display: block;
+  }
+  .sidenav {
+    height: 100%; /* Full-height: remove this if you want "auto" height */
+    width: 260px; /* Set the width of the sidebar */
+    position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at the top */
+    left: 0;
+    background-color: #111; /* Black */
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 20px;
+  }
+.sidenav a:hover {
+    color: #f1f1f1;
+  }
+  
+.card-img{
+    height: 150px;
+    width: 150px;;
+}
+.cardee{
+    width: 320px !important;
+      margin: 40px !important;
+      
+      height: 450px !important;
+}
+body{
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    transform: translate(-50%,-50%);
+    background-color: #2a9d8f;
+}
+body{
+    background-image:none !important;
+    background-color: white !important;
+}
+

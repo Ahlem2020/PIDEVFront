@@ -1,0 +1,108 @@
+<main style="
+background-color: white !important;">
+<div class="sidenav" >
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <div class="x">
+    <form>
+
+     <a class="search">Search by description : </a>
+     
+    <input type="text" class="form-control" id="rec" (keyup)="loadeven($event)"
+            style="width: 174px">
+          </form>
+        </div>
+          
+
+        <div class="incoming_events">
+<div class="inc">Incoming events : </div>
+          <div *ngFor="let ievent of listofincomingevents" class="cadreev" style="border-bottom-style: double;
+          margin-bottom: 2px;">
+          <div><img class="img" src="{{'assets/img/'+ievent.photos}}"><div>{{ievent.domain}} </div><div class="date"  style="margin-bottom: 10px">{{ievent.eventDate}}</div>  </div>
+                
+          <div ><button _ngcontent-nxx-c51="" 
+           (click)="participate(1,ievent.id)" class="btns">Participate </button></div>
+
+          </div>
+        
+        </div>
+</div>
+    <section>
+<!--<app-silder></app-silder> -->
+        <div class="row justify-content-center" style="padding-left:50px!important">
+            <div class="col-md-8 col-lg-5 text-center mb-3">
+                <h5 class="text-danger">Events</h5>
+                <h2>Our events for you</h2>
+            </div>
+        </div>
+
+        
+
+        <div class="xx">
+         <div class="row mb-5 big">
+            <div  class="card card-span cell col-lg-2 cardee" style="background-color: bisque;" *ngFor="let event of listofevent">
+                <div  class="card-body  ">
+                    <div _ngcontent-nxx-c51="" class="text-center pt-5"><img _ngcontent-nxx-c51=""
+                            src="{{'assets/img/'+event.photos}}" style="height:149px;" alt="..." class="img-fluid">
+                        <h5 _ngcontent-nxx-c51="" class="my-4">{{event.domain}}</h5>
+                    </div>
+                    <p _ngcontent-nxx-c51="" style="height: 50px!important;">{{event.description}}  </p>
+                    <ul _ngcontent-nxx-c51="" class="list-unstyled"></ul>
+                    <div _ngcontent-nxx-c51="" class="text-center my-5">
+                        <div style="padding-top:8px; " ><button _ngcontent-nxx-c51="" type="submit"
+                                class="btn btn-primary "  (click)="participate(1,event.id)">Participate </button></div>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <!--
+            <p>Recherche : </p>
+            <div class="x"><input type="text" class="form-control" id="rec" (keyup)="loadeven($event)"
+                    style="width: 174px"></div>
+            <table  class="table">
+    <caption>List of Events</caption>
+    <thead class="table-dark">
+      <tr>
+        <th scope="col">Event Id</th>
+        <th scope="col">Description</th>
+        <th scope="col">Event Date</th>
+        <th scope="col">Domaine</th>
+        <th scope="col">End Date</th>
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let event of listofevent">
+        <td scope="row">{{event.id}}</td>
+        <td>{{event.description}}</td>
+        <td>{{event.eventDate}}</td>
+        <td>{{event.domain}}</td>
+        <td>{{event.eventDate}}</td>
+       <td><button type="button" class="btn btn-danger" (click)="participate(1,event.id)">participate</button></td>
+
+      
+         
+      </tr>
+    </tbody>
+  </table>
+-->
+
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+
+    </section>
+
+
+<main>

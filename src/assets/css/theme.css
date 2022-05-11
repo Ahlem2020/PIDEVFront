@@ -56,14 +56,13 @@
 
 body {
   margin: 0;
-  font-family: "Raleway", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  font-size: 1rem;
+  
+
   font-weight: 400;
   line-height: 1.5;
   color: #2F2E41;
   background-color: #FFFEFE;
-  -webkit-text-size-adjust: 100%;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+ 
 }
 
 hr {
@@ -129,8 +128,24 @@ h4, .h4 {
 
 h5, .h5 {
   font-size: 1.2rem;
+  
 }
+.title{
+  padding-top: 4%;
+ margin-top: 10%;
 
+  height: 10px;
+  width: 100%;
+  font-family: 'Righteous', cursive;
+  font-size: 40px;
+  font-weight: normal;
+  line-height: 60px;
+  margin: 10px 0 20px;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 0 #000;
+   margin: 10px 0 24px;
+  text-align: center;
+}
 h6, .h6 {
   font-size: 0.83333rem;
 }
@@ -3525,6 +3540,19 @@ fieldset:disabled .btn {
   background-color: #B88261;
   border-color: #B88261;
 }
+.first{
+  height: 50px;
+  margin-left: 34%;
+    border: 1px solid #463a21;
+    border-radius: 7px;
+   
+    -webkit-box-shadow: 0 3px 6px rgb(0 0 0 / 16%);
+    -moz-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+    box-shadow: 0 3px 6px rgb(0 0 0 / 16%);
+}
+
+
+
 
 .btn-check:focus + .btn-primary, .btn-primary:focus {
   color: #FFFEFE;
@@ -17456,6 +17484,12 @@ html {
 
 main {
   background-image: url("../img/gallery/bg.png");
+  width: 100%;
+  height: 100%;
+}
+.buttons{
+  margin-left: 38%;
+  
 }
 
 body {
@@ -17582,7 +17616,6 @@ ul {
 .text-gradient {
   background: -o-linear-gradient(40deg, #fb3c00, #ffb800);
   background: linear-gradient(50deg, #fb3c00, #ffb800);
-  -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 

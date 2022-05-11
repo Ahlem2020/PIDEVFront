@@ -2,3 +2,37 @@
    
     color: #E4B299!important;
   }
+  .xxx{
+    position:fixed;
+  }
+  .dropdown-menu {
+    position: absolute ! important;
+    top: 100% ! important;
+    left: 0 ! important;
+    z-index: 1000 ! important;
+    display: none ! important;
+    float: left ! important;
+    min-width: 10rem ! important;
+    padding: .5rem 0 ! important;
+    margin: .125rem 0 0 ! important;
+    font-size: 1rem ! important;
+    color: #212529 ! important;
+    text-align: left ! important;
+    list-style: none ! important;
+    background-color: #fff ! important;
+    background-clip: padding-box ! important;
+    border: 1px solid rgba(0, 0, 0, .15) ! important;
+    border-radius: .25rem
+}
+.dropdown .dropdown-menu {
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.dropup .dropdown-menu {
+    margin-top: 0 ! important;
+    margin-bottom: .125rem
+}

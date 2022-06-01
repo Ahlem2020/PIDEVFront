@@ -20,11 +20,11 @@ export class DetailCondidacyComponent implements OnInit {
   isReadonly = false;
   partner:Condidacy=new Condidacy();
   listOfPartner:Partner[];
-
   ngOnInit(): void {
 
-    this.condidacyService.fetchOneCondidacy(4).subscribe(partner=>this.partner=partner);
+    this.condidacyService.fetchOneCondidacy(8).subscribe(partner=>this.partner=partner);
     this.condidacyService.suggestion(1).subscribe(Partner=>this.listOfPartner=Partner);
+   
   }
 
 
@@ -34,6 +34,7 @@ export class DetailCondidacyComponent implements OnInit {
 
   detailUniversity(){
     this.router.navigate(['/detailUniversity']);
+   
   }
 
   

@@ -82,9 +82,10 @@
                          </div>
                          <div class="col-sm-6 wow fadeIn" data-wow-delay="0.3s">
                              <div class="d-flex align-items-center">
-                                 <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-white" style="width: 60px; height: 60px;">
-                                     Note
+                                 <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-white" style="width: 60px; height: 60px; ">
+                                    <b>Rate us</b>  
                                  </div>
+                                 &nbsp;
                                  <rating  style="color: #edc234;font-size: 30px;" [(ngModel)]="partner.note" [max]="max" [readonly]="isReadonly" (ngModelChange)="note(partner.note)">
                                 </rating>
                              </div>
@@ -119,7 +120,9 @@
    <section class="food_section layout_padding" style="margin-bottom:2%;">
      
      <div class="container" style="margin-left: 10%;">
-         <h1 class="sahar center"> For you </h1> <br>
+         <h2 class="sahar center" style="margin-left: 40%;"> Universities </h2> 
+         <div class="sahar center" style="margin-left: 37%; color: rgb(195, 195, 195); font-size: larger;"> Recommendation that may help you</div>
+         <br>
         
           
          <div class="row">

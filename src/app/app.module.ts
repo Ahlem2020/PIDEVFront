@@ -16,6 +16,11 @@ import { DetailCondidacyComponent } from './component/detail-condidacy/detail-co
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RatingModule } from 'ngx-bootstrap/rating';
 
+
+import { environment } from "../environments/environment";
+import { initializeApp } from 'firebase/app';
+initializeApp(environment.firebase);
+
 @NgModule({
   declarations: [
     AppComponent,

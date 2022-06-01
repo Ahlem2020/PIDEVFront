@@ -30,4 +30,8 @@ export class CondidacyService {
       public delete(id: number) {
         return this.condidacy.delete<Condidacy>(this.url + 'delete-condidacy/' + id);
       }
+
+      public notif(){
+        return 
+      }
 }

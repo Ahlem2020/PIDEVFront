@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
+import { Router } from '@angular/router';
 import { Condidacy } from 'src/app/module/condidacy';
 import { Module } from 'src/app/module/Module';
 import { User } from 'src/app/module/User';
@@ -12,7 +13,7 @@ import { UniversityService } from 'src/app/services/university.service';
 })
 export class AddCondidacyComponent implements OnInit {
 
-  constructor(private condidacyService:UniversityService ,private fb: FormBuilder) { }
+  constructor(private condidacyService:UniversityService ,private fb: FormBuilder,private router:Router) { }
   condidacyForm: FormGroup;
   u:User;
   listOfModule:Module[];
@@ -20,20 +21,25 @@ export class AddCondidacyComponent implements OnInit {
     this.condidacyService.findUserById(1).subscribe(module => this.u = module);
 
     this.condidacyService.modulePartner(6).subscribe(module=>this.listOfModule=module);
+   
     this.condidacyForm = this.fb.group({
       module: ['']
      
     });
 
+    
+   
+
   }
   
 
-  handelSubmit() {
+  handelSubmit(id:number) {
+    this.condidacyService.sendNotification(1).subscribe(); 
     this.condidacyService.addCondidacy(1,this.condidacyForm.value).subscribe();
+    this.router.navigate(['/showC']);
     console.log(this.condidacyForm.value);
+    this.condidacyService.sendNotification(id).subscribe(); 
     
-    
-    this.ngOnInit();
   }
 
  

@@ -19,6 +19,7 @@
     "@angular/platform-browser-dynamic": "~13.0.0",
     "@angular/router": "~13.0.0",
     "feather-icons": "^4.29.0",
+    "firebase": "^9.8.1",
     "is-npm": "^6.0.0",
     "ngx-bootstrap": "^8.0.0",
     "package.json": "^2.0.1",

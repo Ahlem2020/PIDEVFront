@@ -29,10 +29,9 @@ export class DetailUniversityComponent implements OnInit {
 
   ngOnInit(): void {
 
-    this.condidacyService.findPartnerById(1).subscribe(partner=>this.partner=partner);
+    this.condidacyService.findPartnerById(6).subscribe(partner=>this.partner=partner);
     this.condidacyService.suggestion(1).subscribe(Partner=>this.listOfPartner=Partner);
-    
-
+   
      }
 
   
@@ -46,6 +45,7 @@ export class DetailUniversityComponent implements OnInit {
 
   detailUniversity(){
     this.router.navigate(['/detailUniversity']);
+   
   }
 
   

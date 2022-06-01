@@ -14,7 +14,7 @@ enum State{
 }
 
 export class Condidacy{
-id!:number;
+id:number;
 created_at:Date;
 state:State;
 type:Type;
